@@ -88,6 +88,7 @@ To manage and evaluate the dataset, this study employs the K-Fold Cross Validati
 
 The following figure illustrates the workflow of the K-Fold Cross Validation process.
 <img width="885" height="613" alt="image" src="https://github.com/user-attachments/assets/6d31124f-795c-40fb-8c0e-7467a2e23bf9" />
+
 Source : http://scikit-learn.org/stable/modules/cross_validation.html
 
 The model was trained for 10 epochs in each fold of the K-Fold Cross Validation scheme. During the training process, the model computed the training loss and training accuracy at every epoch to monitor the learning progress and evaluate its performance on the training data. After completing the training phase for a given fold, the model was evaluated using the corresponding testing set. The evaluation results were reported using several performance metrics, including test loss, test accuracy, test precision, test recall, and test F1-score, which were used to assess the model's classification performance on previously unseen data.
@@ -104,8 +105,7 @@ $$
 **Macro Precision**
 
 $$
-Precision_{macro}
-=
+Precision_{macro}=
 \frac{1}{N}
 \sum_{i=1}^{N}
 \frac{TP_i}{TP_i+FP_i}
@@ -114,8 +114,7 @@ $$
 **Macro Recall**
 
 $$
-Recall_{macro}
-=
+Recall_{macro}=
 \frac{1}{N}
 \sum_{i=1}^{N}
 \frac{TP_i}{TP_i+FN_i}
@@ -124,8 +123,7 @@ $$
 **Macro F1-Score**
 
 $$
-F1_{macro}
-=
+F1_{macro}=
 \frac{1}{N}
 \sum_{i=1}^{N}
 2
