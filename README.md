@@ -87,6 +87,7 @@ The objective of the training process is to minimize the classification error by
 To manage and evaluate the dataset, this study employs the K-Fold Cross Validation method, which systematically partitions the dataset into multiple subsets. This approach divides the dataset into K equally sized folds. During each iteration, K−1 folds are used as the training set, while the remaining one fold serves as the testing set. The process is repeated K times, allowing each fold to be used as the testing set exactly once. In this implementation, the configuration `kfold(n_splits=5, shuffle=True)` is adopted, indicating that the dataset is divided into five folds. Consequently, each iteration uses four folds (80%) for training and one fold (20%) for testing. This approach provides a more reliable evaluation of the model, reduces bias caused by a single train–test split, and offers a more representative estimate of the model's generalization performance.
 
 The following figure illustrates the workflow of the K-Fold Cross Validation process.
+
 <img width="885" height="613" alt="image" src="https://github.com/user-attachments/assets/6d31124f-795c-40fb-8c0e-7467a2e23bf9" />
 
 Source : http://scikit-learn.org/stable/modules/cross_validation.html
