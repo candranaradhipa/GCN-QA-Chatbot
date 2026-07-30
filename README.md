@@ -96,6 +96,7 @@ The model was trained for 10 epochs in each fold of the K-Fold Cross Validation 
 After completing the training process for all **10 epochs** across the **5-fold cross-validation** procedure, the model performance is evaluated by averaging the results obtained from each fold. The evaluation is conducted using four standard classification metrics: **Accuracy**, **Precision**, **Recall**, and **F1-Score**. These metrics provide a comprehensive assessment of the model's ability to correctly classify question–answer pairs and measure its overall predictive performance.
 
 The evaluation metrics are calculated using the following formulas:
+
 **Accuracy**
 
 $$
@@ -166,5 +167,11 @@ Search Here :jelaskan informasi mengenai bu Amilah!
 Predicted Answer: NIK : 199210262020013201\nNama : Amila Sofiah, S.T., M.T.\nPendidikan : S2 Teknik Elektro, Institut Teknologi Bandung\nResearch Interest : Biomedical Signal Processing, Instrumentation & Control, Robotics\nEmail : amila.sofiah@ftmm.unair.ac.id
 ```
 
+## Contributor
+[**Candra Naradhipa Cahyakusuma**](https://github.com/candranaradhipa)
+
+[Robotics and AI Engineering](https://ftmm.unair.ac.id/teknik-robotika-dan-kecerdasan-buatan-program-studi/), [Universitas Airlangga](https://unair.ac.id/)
+
+<candradhipa16@gmail.com>
 
 
