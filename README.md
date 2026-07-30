@@ -30,13 +30,11 @@ The constructed graphs are stored as `Data` objects provided by the PyTorch Geom
 ### GCN Model Architecture
 The Graph Convolutional Network (GCN) architecture implemented in this study consists of two Graph Convolutional (GCNConv) layers designed to learn feature representations from the constructed graph structure. In the first layer, the initial node features are processed using GCNConv(input_dim, hidden_dim) to generate richer feature representations by aggregating information from neighboring nodes. The resulting features are then passed through the Rectified Linear Unit (ReLU) activation function to introduce non-linearity, enabling the model to capture more complex patterns within the graph. Subsequently, the transformed features are processed by a second GCNConv layer (GCNConv(hidden_dim, output_dim)) to produce the final feature representations for classification. Before generating the final prediction, Global Mean Pooling (torch.mean()) is applied to aggregate the features of all nodes into a single graph-level representation by computing their average. This graph representation is then used as the input to the classification stage to predict the most appropriate answer corresponding to the user's query.
 
-### 🏋️ Model Training
+### Model Training
 
 The Graph Convolutional Network (GCN) model is trained using the graph dataset generated during the preprocessing stage. During each training epoch, every graph is passed through two Graph Convolutional (GCNConv) layers followed by a ReLU activation function and a Global Mean Pooling layer to obtain a graph-level representation. The prediction error is computed using the CrossEntropyLoss function, while the model parameters are optimized using the Adam optimizer through backpropagation. This training process is repeated for **10 epochs** to enable the model to learn the relationships between questions and their corresponding answers.
 
----
-
-#### 🔄 Training Workflow
+#### Training Workflow
 
 ```text
 Graph Dataset
@@ -75,24 +73,17 @@ Weight Update
 Repeat for 10 Epochs
 ```
 
----
-
-#### ⚙️ Training Configuration
+#### Training Configuration
 
 | Parameter | Value |
 |:----------|:------|
 | **Model** | Graph Convolutional Network (GCN) |
 | **Graph Convolution Layers** | 2 |
 | **Activation Function** | ReLU |
-| **Pooling Method** | Global Mean Pooling |
 | **Loss Function** | CrossEntropyLoss |
 | **Optimizer** | Adam |
 | **Epochs** | 10 |
-| **Input** | Graph Dataset |
-| **Output** | Predicted Answer Class |
 
----
-
-#### 📊 Training Objective
+#### Training Objective
 
 The objective of the training process is to minimize the classification error by learning the structural relationships between question and answer graphs. The optimized model is then used to predict the most relevant answer for a given user query.
